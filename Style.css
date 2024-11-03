@@ -128,3 +128,19 @@ div{
 img{
     margin: 1px;
 }
+
+.parent{
+    background-color: black;
+    display: flex;
+    width: 400px;
+    height: 600px;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+div{
+    background-color: yellow;
+    border-radius: 5px;
+    margin: 5px;
+    
+}
