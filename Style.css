@@ -4,3 +4,20 @@ div{
     padding: 10px;
     margin: auto;
 }
+
+.one{
+    background: rgb(4, 4, 4);
+    color: yellow;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+.Two{
+    background: rgb(201, 196, 196);
+    padding: 50px;
+    border-color: black;
+    border-style: solid;
+    border-width: 5px;
+    margin: 20px;
+}
