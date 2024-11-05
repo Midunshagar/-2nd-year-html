@@ -1,66 +1,442 @@
-@media screen and (max-width: 600px) {
-    .two{
-        flex-basis: 100%;
-    }
-    .three{
-        flex-basis: 40%;
-    }
-    
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=La+Belle+Aurore&display=swap");
+
+:root{
+    font-size: 14px;
 }
 
-@media screen and (max-width: 400px) {
-    .three{
-        flex-basis: 100%;
-    }
-    
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.container{
-    flex-wrap: wrap;
+body{
+    background-color: #302e2e;
+    color: rgb(255, 255, 255);
+    width: 100%;
+    font-family: "Poppins", sans-serif;
+}
+
+a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.nav-logo{
+    width: 4wv;
+    height: 4vw;
+}
+
+header .logocontainer .logo{
     display: flex;
-    justify-content: space-around;
-
-
-}
-.one{
-    background-color: greenyellow;
-    height: 100px;
-    margin: 2px;
+    flex-wrap: wrap;
     flex-basis: 100%;
     
+}
     
+header{
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 25px 9%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    flex-wrap: wrap;
+    flex-basis: 100%;
 }
 
-.two{
-    background-color: blue;
-    height: 200px;
-    margin: 2px;
-    flex-basis: 30%;
-    flex-grow: 1;
+header .logo p{
+    font-size: 2.25vw;
+    font-weight: 700;
+
 }
 
-.three{
-    background-color: grey;
+header .navbartext li{
+    display: flex;
+    margin-left: 1.5vw;
+}
+
+.navbartext{
+    display: flex;
+}
+
+header .navbartext li a{
+    font-size: 1.75vw;
+    color: white;
+    transition: 0.5s;
+}
+
+header .navbartext li:hover a{
+    color: #73ff3c;
+    text-decoration: underline;
+    transition: 0.5s;
+}
+
+.home-intro{
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    padding: 60px 9% 0;
+    margin-top: 50px;
+}
+
+.home-intro h1{
+    font-size: 53px;
+    font-weight: 700;
+    margin-top: -10px;
+}
+
+.home-intro h2{
+    font-size: 30px;
+    font-weight: 700;
+    margin-top: -10px;
+}
+
+.home-intro p{
+    font-size: 17px;
+    margin: 10px 0 24px;
+}
+
+.home-intro .socio-ico{
+    display: flex;
+
+
+}
+
+.home-intro .about-btn{
+    display: inline-block;
+    padding: 6px 20px;
+    background-color: #73ff3c;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: #73ff3c;
+    border-width: 2px;
+    box-shadow: 0 0 12px;
+    box-shadow: #73ff3c;
+    font-size: 16px;
+    font-weight: 700;
+    color: black;
+    transition: 0.5s;
+}
+
+.home-intro .about-btn:hover{
+    background-color: transparent;
+    color: #73ff3c;
+    transition: 0.5s;
+}
+
+.home-intro .socio-btn .socio-ico{
+    margin-bottom: 15px;   
+}
+
+.home-intro .socio-btn .socio-ico a{
+    display: inline-flex;
+    padding: 8px;
+    border: 2px solid #73ff3c; 
+    border-radius: 50%;
+    font-size: 17px;
+    color:white;
+    margin:0 8px;
+    transition: 0.5s;
+}
+
+.home-intro .socio-btn .socio-ico a:hover{
+    background-color:black;
+    color: #73ff3c;
+    box-shadow: 0 0 10px;
+    box-shadow: #73ff3c;
+    transition: 0.5s;
+}
+
+.pic-cntr .pic-bg{
+    width: 32vw;
+    height: 32vw;
+    background: #73ff3c;
+    border-radius: 50%;
+    position: relative;
+    rotate: -5deg;
+    overflow: hidden;
+}
+
+.pic-cntr .pic-bg .pic-hldr{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 40%;
+    opacity: 0.9;
+    margin-right: 50px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.pic-cntr .pic-bg .pic-hldr .pic{
+    position: absolute;
+    display: block;
+    width: 120%;
+    top: 65px;
+    right: 35px;
+    object-fit: cover;
+}
+
+
+.newsletter{
+    position: relative;
+    margin-top: 9rem;
+    margin-bottom: 2rem;
+}
+
+.newsletter-box{
+    min-height: 40vh;
+    width: 85%;
+    margin-left: 8%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color:rgb(29, 28, 28);
+    border: 1px solid;
+    border-color: #73ff3c;
+    border-radius: 50px;
+    backdrop-filter: blur(20px);
+    padding: 28px 28px;
+}
+
+
+
+/* Styling the  newsletter-box */
+.newsletter-box div:nth-child(2){
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    flex-direction: column;
+    margin: 21px 0;
+    font-size: 0.9rem;
+}
+
+.newsletter-box h2{
+    margin: 0px;
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+}
+
+.newsletter-box form{
+    width: 100%;
+    margin-top: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+/* Using Attribute selectors*/
+.newsletter-box input[type='email'], .newsletter-box input[type='name'], .newsletter-box textarea{
+    background-color: #1e1d1d;
+    padding: 8px 18px;
+    height: 46px;
+    width: 250px;
+    border-radius: 20px;
+    border: 1px solid #909096;
+    font-family: inherit;
+    font-size: 0.8rem;
+    color:grey;
+    transition: all 0.1s ease;
+    margin: 10px;
+}
+
+
+/* Using  nth psuedo class*/
+#contact .newsletter:nth-child(3){
+    margin-top: 3rem;
+}
+
+#contact .newsletter-box textarea{
     height: 100px;
-    margin: 2px;
-    flex-basis: 20%;
-    flex-grow: 1;
+    margin: 12px;
+    width: min(525px, 80%);
+}
+
+
+/* Using  Attribute selectors */
+.newsletter-box input:focus, .newsletter-box textarea:focus{
+    background-color: #302e2e;
+    box-shadow: none;
+    outline: none;
+}
+
+/* Using validity psuedo class  */
+.newsletter-box input:focus:invalid, .newsletter-box textarea:focus:invalid{
+    border: 2px  red;
+}
+
+/* Using Attribute selectors for styling purpose of button */
+.newsletter-box input[type='submit']{
+    padding: 12px 18px;
+    height: 44px;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #000;
+    background-color:black;
+    color: #73ff3c;
+    box-shadow: 0 0 10px;
+    box-shadow: #73ff3c;
+    transition: 0.5s;
+}
+
+.newsletter-box input[type='submit']:hover{
+    opacity: 0.9;
+}
+
+.footer-parent{
+    margin: 1rem 3rem;
+    font-size: 13px;
+    font-weight: 100;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.5;
+
+}
+
+/*About page styling*/
+
+.me .socio-btn .socio-ico a{
+    display: inline-flex;
+    padding: 8px;
+    border: 2px solid #73ff3c; 
+    border-radius: 30%;
+    font-size: 17px;
+    color:white;
+    margin:0 8px;
+    transition: 0.5s;
+}
+
+.me .socio-btn .socio-ico a:hover{
+    background-color:black;
+    color: #73ff3c;
+    box-shadow: 0 0 10px;
+    box-shadow: #73ff3c;
+    transition: 0.5s;
+}
+
+
+.me .socio-btn .socio-ico{
+    margin-bottom: 15px;
+    margin-top: 15px;   
+}
+.me .about-btn:hover{
+    background-color: transparent;
+    color: #73ff3c;
+    transition: 0.5s;
+}
+
+.me h2{
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.me h3{
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    opacity: 0.7;
     
 }
 
-@media screen and (max-width: 600px) {
-    .two{
-        flex-basis: 100%;
-    }
-    .three{
-        flex-basis: 40%;
-    }
-    
+.me{
+    margin-top: 100px;
+    padding: 60px 9% 0;
+
 }
 
-@media screen and (max-width: 400px) {
-    .three{
-        flex-basis: 100%;
-    }
-    
+/*Blog Page*/
+.blog{
+    margin-top: 100px;
+    padding: 60px 9% 0;
+    justify-content: center;
+    justify-items: center;
 }
+
+.blog2{
+    margin-top: 100px;
+    padding: 60px 9% 0;
+    justify-content: center;
+    justify-items: center;
+    
+
+}
+
+
+
+/*Medium screen*/
+@media screen and (max-width:600px){
+   
+    header .logo p{
+        font-size: 2vw;
+        
+    }
+
+    header .logocontainer .logo img{
+        height: 6vw;
+        width: 6vw;
+    }
+
+    header .navbartext li{
+        margin-left: 2vw;
+    }
+
+    header .navbartext li a{
+        font-size: 2.25vw;
+    }
+
+    .intro{
+        margin-top: 20px;
+    }
+}
+
+/*small screen*/
+@media screen and (max-width:400px){
+    header .logo p{
+        font-size: 3vw;
+    }
+
+    header .logocontainer .logo img{
+        height: 6vw;
+        width: 6vw;
+    }
+
+    header .navbartext li{
+        margin-left: 2vw;
+    }
+
+    header .navbartext li a{
+        font-size: 2.25vw;
+    }
+}
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
